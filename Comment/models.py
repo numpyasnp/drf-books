@@ -20,7 +20,7 @@ class Books(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     publish_at = models.DateTimeField()
-    status = models.CharField(max_length=10, choices=options, default="pusblished")
+    status = models.CharField(max_length=10, choices=options, default="published")
     objects = models.Manager()
     bookobjects = BookObject()
 

@@ -4,14 +4,16 @@ from rest_framework import generics
 from rest_framework.exceptions import ValidationError
 from rest_framework.generics import get_object_or_404
 
+from .pagination import LargePagination, SmallPagination
 from .permission import IsAdminUserOrReadOnly, IsAuthenticatedOrReadOnly
 from .serializer import BooksSerializer, CommentSerializer
 
 
 class BooksListCreateAPIView(generics.ListCreateAPIView):
-    queryset = Books.bookobjects.all()
+    queryset = Books.bookobjects.all().order_by("-id")
     serializer_class = BooksSerializer
     permission_classes = [IsAdminUserOrReadOnly]
+    # pagination_class = SmallPagination
 
 
 class BooksDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
