@@ -12,12 +12,12 @@ from Comment.models import Books, Comment
 
 from scripts.fake_data import add_user, add_book
 
-# Add Fake User
 for _ in range(2):
 
     add_user()
 
-# Output like this
+Output like this
+
 Tracy Heath tracy_heath@evans.com
 
 user created tracy_heath
