@@ -1,24 +1,24 @@
-Books-Comment api / Add fake data (User or Book) / Costum Permissions
+Books-Comment api / Add fake data (User or Book) / Spesific Permissions
 
 # SuperUser
-Username = admin
-password = admin123
+Username = admin < br >
+password = admin123 < br >
 
 
 # Add Fake User and Data
-python manage.py shell
-from Comment.models import Books, Comment
-from scripts.fake_data import add_user, add_book
+python manage.py shell< br >
+from Comment.models import Books, Comment< br >
+from scripts.fake_data import add_user, add_book< br >
 
 # Add Fake User
-for _ in range(2):
-    add_user()
+for _ in range(2):< br >
+    add_user()< br >
 
 # Output like this
-Tracy Heath tracy_heath@evans.com
-user created tracy_heath
-Christian Burton christian_burton@brown-reynolds.com
-user created christian_burton
+Tracy Heath tracy_heath@evans.com< br >
+user created tracy_heath< br >
+Christian Burton christian_burton@brown-reynolds.com< br >
+user created christian_burton< br >
 
 # Add Books
 add_book("love") # add books about "love"
