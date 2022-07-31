@@ -15,7 +15,7 @@ from scripts.fake_data import add_user, add_book
 # Add Fake User
 for _ in range(2):
 
-    add_user()< br >
+    add_user()
 
 # Output like this
 Tracy Heath tracy_heath@evans.com
